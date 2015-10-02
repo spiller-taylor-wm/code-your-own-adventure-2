@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Princess Unicorn</title>
 
     <style>
@@ -9,12 +9,11 @@
 
         }
 
-        container{
+        #container{
             width: 800px;
             margin-left: auto;
             margin-right: auto;
-            border: 10px;
-            border-color: 'black';
+            border: 10px solid black;
         }
 
         main{
@@ -23,40 +22,50 @@
             background-image: url("http://theartmad.com/wp-content/uploads/2015/04/Forest-At-Night-21.jpg");
         }
 
-        textBox{
+        #textBox{
             width: 800px;
             height: 200px;
-            background-color: 'black';
+            background-color: black;
         }
 
         #visit_return_button{
-            background-color:#9C8C42;
+            background-color: #9C8C42;
             border: 2px solid #91782c;
-            color: #FFF;
+            color: #FFFFFF;
             text-align: center;
             -webkit-border-radius: 4px;
             -moz-border-radius: 4px;
             border-radius: 4px;
             padding: 10px;
         }
+
     </style>
 
 </head>
 
 <body>
 
-    <container>
+    <div id="container">
         <main>
+            <!---Empty table will display character pictures depending on
+            which characters are involved in the current plot line --->
+            <table align = "center">
+                <tr>
+                    <td id="charPic1"></td>
+                    <td id="charPic2"></td>
+                    <td id="charPic3"></td>
+                </tr>
+            </table>
 
         </main>
 
-        <textBox>
+        <div id="textBox">
             <p id="text1"></p>
             <p id="text2"></p>
             <p id="buttonBox"></p>
-        </textBox>
+        </div>
 
-    </container>
+    </div>
 
 </body>
 </html>
