@@ -3,29 +3,70 @@
  */
 
 var character;
+var storyLineNumber = 0;
+var answer;
 
+var storyBob = ["Plot line 1", "Plot line 2"];
+var questionBob = ["Question 1", "Question 2"];
+var storyKevin = [];
+var questionKevin =[];
+var storySteve = [];
+var questionSteve = [];
+
+/**
+ * Function to change the two paragraphs on the HTML page that display
+ * both the storyline text and the question that the player must answer.
+ */
+var changeText = function(char){
+    switch(char){
+        case 'Bob':
+            document.getElementById("storyText").innerHTML = storyBob[storyLineNumber];
+            document.getElementById("questionText").innerHTML = questionBob[storyLineNumber];
+            break;
+
+        case 'Kevin':
+            document.getElementById("storyText").innerHTML = storyKevin[storyLineNumber];
+            document.getElementById("questionText").innerHTML = questionKevin[storyLineNumber];
+            break;
+
+        case 'Steve':
+            document.getElementById("storyText").innerHTML = storySteve[storyLineNumber];
+            document.getElementById("questionText").innerHTML = questionSteve[storyLineNumber];
+            break;
+
+        default:
+            break;
+    }
+    storyLineNumber ++;
+};
+
+/**
+ *Function to start the game. It is called when the start button is clicked.
+ * It will call the appropriate function for the character picked.
+ */
 var startGame = function(name) {
     switch(name){
         case 'Princess Kevin':
-            storyKevin();
+            functionKevin();
             break;
         case 'Bob':
-            storyBob();
+            functionBob();
             break;
         case 'Nice Queen':
-            storyQueen();
+            functionSteve();
             break;
         default:
             break;
     }
 };
 
-var storyKevin = function() {
+var functionKevin = function() {
 
 };
 
-var storyBob = function() {
-    console.log("Bob ");
+var functionBob = function() {
+    changeText('Bob');
+    /**
     var answer = prompt("Does Bob continue to take care of his shop, or does he visit his friend Steve?", "Shop or Steve").toLowerCase();
     switch(answer){
         case 'shop':
@@ -45,8 +86,9 @@ var storyBob = function() {
             break;
         default:
     }
+     */
 };
 
-var storyQueen = function() {
+var functionSteve = function() {
 
 };
