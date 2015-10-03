@@ -6,8 +6,8 @@ var character;
 var storyLineNumber = 0;
 var answer;
 
-var storyBob = ["Plot line 1", "Plot line 2"];
-var questionBob = ["Question 1", "Question 2"];
+var storyBob = [ ["Plot line 1", "no1"], ["Plot line 2", 'no2'] ];
+var questionBob = [ ["Does Bob continue to take care of his shop, or does he visit his friend Steve?"] , "Question 2"];
 var storyKevin = [];
 var questionKevin =[];
 var storySteve = [];
@@ -20,17 +20,17 @@ var questionSteve = [];
 var changeText = function(char){
     switch(char){
         case 'Bob':
-            document.getElementById("storyText").innerHTML = storyBob[storyLineNumber];
+            document.getElementById("storyText").innerHTML = storyBob[storyLineNumber][0];
             document.getElementById("questionText").innerHTML = questionBob[storyLineNumber];
             break;
 
         case 'Kevin':
-            document.getElementById("storyText").innerHTML = storyKevin[storyLineNumber];
+            document.getElementById("storyText").innerHTML = storyKevin[storyLineNumber][0];
             document.getElementById("questionText").innerHTML = questionKevin[storyLineNumber];
             break;
 
         case 'Steve':
-            document.getElementById("storyText").innerHTML = storySteve[storyLineNumber];
+            document.getElementById("storyText").innerHTML = storySteve[storyLineNumber][0];
             document.getElementById("questionText").innerHTML = questionSteve[storyLineNumber];
             break;
 
@@ -38,6 +38,26 @@ var changeText = function(char){
             break;
     }
     storyLineNumber ++;
+};
+
+var wrongAnswer = function(char){
+    switch(char){
+        case 'Bob':
+            document.getElementById("storyText").innerHTML = storyBob[storyLineNumber][1];
+            break;
+
+        case 'Kevin':
+            document.getElementById("storyText").innerHTML = storyKevin[storyLineNumber][1];
+            break;
+
+        case 'Steve':
+            document.getElementById("storyText").innerHTML = storySteve[storyLineNumber][1];
+            break;
+
+        default:
+            break;
+    }
+    storyLineNumber = 0;
 };
 
 /**
@@ -66,6 +86,7 @@ var functionKevin = function() {
 
 var functionBob = function() {
     changeText('Bob');
+
     /**
     var answer = prompt("Does Bob continue to take care of his shop, or does he visit his friend Steve?", "Shop or Steve").toLowerCase();
     switch(answer){
@@ -87,8 +108,4 @@ var functionBob = function() {
         default:
     }
      */
-};
-
-var functionSteve = function() {
-
 };

@@ -25,47 +25,51 @@
         #textBox{
             width: 800px;
             height: 200px;
-            background-color: black;
-        }
-
-        #visit_return_button{
-            background-color: #9C8C42;
-            border: 2px solid #91782c;
-            color: #FFFFFF;
-            text-align: center;
-            -webkit-border-radius: 4px;
-            -moz-border-radius: 4px;
-            border-radius: 4px;
-            padding: 10px;
+            background-color: white;
         }
 
     </style>
+
+    <script src="script.js"></script>
 
 </head>
 
 <body>
 
+<table align = "center">
+    <tr>
+        <td> <img id="imgCharacter1" onclick="changeText('Bob')" src ="https://derpicdn.net/img/2013/6/28/359217/full.png" width="50px" height="50px"/> </td>
+        <td> <img id="imgCharacter2" onclick="wrongAnswer('Bob')" src="https://derpicdn.net/img/2013/6/28/359217/full.png" width="100px" height="100px"/> </td>
+        <td> <img id="imgCharacter3" src=""/> </td>
+    </tr>
+</table>
+
+<p id="storyText"></p>
+<p id="questionText"></p>
+
+<table>
+    <tr>
+        <td> <button id="button1" type="button" onclick="">Click Me!</button> </td>
+        <td> <button id="button2" type="button" onclick="">Click Me!</button> </td>
+    </tr>
+</table>
+<!---
     <div id="container">
         <main>
             <!---Empty table will display character pictures depending on
-            which characters are involved in the current plot line --->
-            <table align = "center">
-                <tr>
-                    <td id="charPic1"></td>
-                    <td id="charPic2"></td>
-                    <td id="charPic3"></td>
-                </tr>
-            </table>
+            which characters are involved in the current plot line
+
 
         </main>
 
         <div id="textBox">
-            <p id="text1"></p>
-            <p id="text2"></p>
+            <p id="storyText"></p>
+            <p id="questionText"></p>
             <p id="buttonBox"></p>
         </div>
 
     </div>
+--->
 
 </body>
 </html>
