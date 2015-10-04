@@ -10,22 +10,23 @@
         }
 
         #container{
-            width: 800px;
+            width: 700px;
             margin-left: auto;
             margin-right: auto;
             border: 10px solid black;
         }
 
         main{
-            width: 800px;
-            height: 600px;
+            width: 700px;
+            height: 400px;
             background-image: url("http://theartmad.com/wp-content/uploads/2015/04/Forest-At-Night-21.jpg");
         }
 
         #textBox{
-            width: 800px;
-            height: 200px;
-            background-color: white;
+            width: 680px;
+            background-color: grey;
+			padding: 10px;
+			border-top: 10px solid black;
         }
 
     </style>
@@ -36,40 +37,32 @@
 
 <body>
 
-<table align = "center">
-    <tr>
-        <td> <img id="imgCharacter1" onclick="changeText('Bob')" src ="https://derpicdn.net/img/2013/6/28/359217/full.png" width="50px" height="50px"/> </td>
-        <td> <img id="imgCharacter2" onclick="wrongAnswer('Bob')" src="https://derpicdn.net/img/2013/6/28/359217/full.png" width="100px" height="100px"/> </td>
-        <td> <img id="imgCharacter3" src=""/> </td>
-    </tr>
-</table>
-
-<p id="storyText"></p>
-<p id="questionText"></p>
-
-<table>
-    <tr>
-        <td> <button id="button1" type="button" onclick="">Click Me!</button> </td>
-        <td> <button id="button2" type="button" onclick="">Click Me!</button> </td>
-    </tr>
-</table>
-<!---
-    <div id="container">
+    <div id="container" align = "center">
         <main>
+		<br/><br/><br/><br/><br/><br/>
             <!---Empty table will display character pictures depending on
-            which characters are involved in the current plot line
-
-
+            which characters are involved in the current plot line--->
+			<table>
+				<tr>
+					<td> <img id="imgCharacter1" onclick="character = 'Bob'" src ="https://derpicdn.net/img/2013/6/28/359217/full.png" width="200px" height="210px" /> </td>
+					<td> <img id="imgCharacter2" onclick="character = 'Kevin'" src="https://derpicdn.net/img/2013/6/7/342631/full.png" width="200px" height="200px" /> </td>
+					<td> <img id="imgCharacter3" onclick="character = 'Steve'" src="http://pre13.deviantart.net/b624/th/pre/i/2014/146/c/e/unicorn_noteworthy_by_vectorizedunicorn-d7ju47d.png" width="200px" height = "200px" /> </td>
+				</tr>
+			</table>
         </main>
 
         <div id="textBox">
             <p id="storyText"></p>
             <p id="questionText"></p>
-            <p id="buttonBox"></p>
+			
+            <table>
+				<tr>
+					<td> <button id="button1" type="button"></button> </td>
+					<td> <button id="button2" type="button" onclick="startGame()">Begin!</button> </td>
+				</tr>
+			</table>
         </div>
-
     </div>
---->
 
 </body>
 </html>
