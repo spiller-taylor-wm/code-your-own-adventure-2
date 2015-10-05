@@ -44,20 +44,20 @@
             which characters are involved in the current plot line--->
 			<table>
 				<tr>
-					<td> <img id="imgCharacter1" onclick="character = 'Bob'" src ="https://derpicdn.net/img/2013/6/28/359217/full.png" width="200px" height="210px" /> </td>
-					<td> <img id="imgCharacter2" onclick="character = 'Kevin'" src="https://derpicdn.net/img/2013/6/7/342631/full.png" width="200px" height="200px" /> </td>
-					<td> <img id="imgCharacter3" onclick="character = 'Steve'" src="http://pre13.deviantart.net/b624/th/pre/i/2014/146/c/e/unicorn_noteworthy_by_vectorizedunicorn-d7ju47d.png" width="200px" height = "200px" /> </td>
+					<td> <img id="imgCharacter1" onclick="character = 'Bob'; document.getElementById('storyText').innerHTML = 'Bob'" src ="https://derpicdn.net/img/2013/6/28/359217/full.png" width="200px" height="210px" /> </td>
+					<td> <img id="imgCharacter2" onclick="character = 'Kevin'; document.getElementById('storyText').innerHTML = 'Princess Kevin'" src="https://derpicdn.net/img/2013/6/7/342631/full.png" width="200px" height="200px" /> </td>
+					<td> <img id="imgCharacter3" onclick="character = 'Steve'; document.getElementById('storyText').innerHTML = 'Steve'" src="http://pre13.deviantart.net/b624/th/pre/i/2014/146/c/e/unicorn_noteworthy_by_vectorizedunicorn-d7ju47d.png" width="200px" height = "200px" /> </td>
 				</tr>
 			</table>
         </main>
 
         <div id="textBox">
             <p id="storyText"></p>
-            <p id="questionText"></p>
+            <p id="questionText">Click on a character, then click below to begin.</p>
 			
             <table>
 				<tr>
-					<td> <button id="button1" type="button"></button> </td>
+					<td> <button id="button1" style ="visibility: hidden" type="button"></button> </td>
 					<td> <button id="button2" type="button" onclick="startGame()">Begin!</button> </td>
 				</tr>
 			</table>
